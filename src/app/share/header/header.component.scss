@@ -1,0 +1,72 @@
+@import "styles";
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  padding: 2rem 31.5rem;
+  border-bottom: 1px solid $line;
+  position: sticky;
+  top: 0;
+}
+
+.header__menu {
+  margin-left: 8rem;
+  margin-right: auto;
+}
+
+.header__menu-list {
+  list-style-type: none;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+.header__menu-item-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  transition: 0.15s;
+  text-decoration: none;
+  color: $black;
+}
+
+.header__menu-item-link:hover {
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid $primary;
+}
+
+a.active {
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid $primary;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header__button--sign-in, .header__button--sign-up {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  padding: 0.4rem 2.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header__button--sign-in {
+  color: $black;
+}
+
+.header__button--sign-up {
+  background-color: $black;
+  color: $white;
+}
+
+
+
+
