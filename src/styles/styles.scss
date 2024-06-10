@@ -1,0 +1,16 @@
+@import "mixins";
+@import "variables";
+@import "typography";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Roboto-Regular, serif;
+  color: $on-surface;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 
+
+
 @Component({
   selector: 'ba-header',
   standalone: true,

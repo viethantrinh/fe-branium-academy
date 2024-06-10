@@ -13,34 +13,33 @@
 .header__menu {
   margin-left: 8rem;
   margin-right: auto;
-}
 
-.header__menu-list {
-  list-style-type: none;
-  display: flex;
-  gap: 6rem;
-  align-items: center;
-  padding: 1rem;
+  &-list {
+    list-style-type: none;
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    padding: 1rem;
+  }
 
-}
+  &-item-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    transition: 0.15s;
+    text-decoration: none;
+    color: $on-surface;
+  }
 
-.header__menu-item-link {
-  font-size: 1.6rem;
-  font-weight: bold;
-  line-height: 2.6rem;
-  transition: 0.15s;
-  text-decoration: none;
-  color: $black;
-}
+  &-item-link:hover {
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid $primary;
+  }
 
-.header__menu-item-link:hover {
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid $primary;
-}
-
-a.active {
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid $primary;
+  &-item-link.active {
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid $primary;
+  }
 }
 
 .header__buttons {
@@ -48,7 +47,8 @@ a.active {
   align-items: center;
 }
 
-.header__button--sign-in, .header__button--sign-up {
+.header__button--sign-in,
+.header__button--sign-up {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 2.6rem;
@@ -59,14 +59,10 @@ a.active {
 }
 
 .header__button--sign-in {
-  color: $black;
+  color: $on-surface;
 }
 
 .header__button--sign-up {
-  background-color: $black;
+  background-color: $on-surface;
   color: $white;
 }
-
-
-
-
