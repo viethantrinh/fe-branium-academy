@@ -1,1 +1,40 @@
-<p>sign-up works!</p>
+<div class="sign-up">
+  <h1 class="sign-up__title">Đăng ký tài khoản mới</h1>
+  <form class="sign-up__form">
+    <div class="sign-up__fields">
+      <div class="sign-up__field-group">
+        <div class="sign-up__field sign-up__field--short">
+          <label for="last-name" class="sign-up__label">Họ</label>
+          <input type="text" id="last-name" class="sign-up__input" placeholder="Họ">
+        </div>
+        <div class="sign-up__field sign-up__field--short">
+          <label for="first-name" class="sign-up__label">Tên</label>
+          <input type="text" id="first-name" class="sign-up__input" placeholder="Tên">
+        </div>
+      </div>
+      <div class="sign-up__field">
+        <label for="email" class="sign-up__label">Email</label>
+        <input type="email" id="email" class="sign-up__input" placeholder="Email">
+      </div>
+      <div class="sign-up__field">
+        <label for="password" class="sign-up__label">Mật khẩu (tối thiểu 12 kí tự bao gồm....)</label>
+        <input type="password" id="password" class="sign-up__input"
+               placeholder="Mật khẩu (tối thiểu 12 kí tự bao gồm....)">
+      </div>
+      <div class="sign-up__field">
+        <label for="confirm-password" class="sign-up__label">Xác nhận mật khẩu</label>
+        <input type="password" id="confirm-password" class="sign-up__input" placeholder="Xác nhân mật khẩu">
+      </div>
+    </div>
+    <div class="sign-up__terms">
+      <input type="checkbox" id="terms" class="sign-up__checkbox">
+      <label for="terms" class="sign-up__terms-text">Tôi đồng ý với
+        <a href="#" class="sign-up__terms-link">điều khoản dịch vụ</a>
+      </label>
+    </div>
+    <div class="sign-up__actions">
+      <button type="submit" class="sign-up__submit">Đăng Ký</button>
+      <p class="sign-up__login-prompt">Bạn đã có tài khoản? <a href="#" class="sign-up__login-link">Đăng nhập</a></p>
+    </div>
+  </form>
+</div>
