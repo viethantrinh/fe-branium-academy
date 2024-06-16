@@ -17,9 +17,9 @@
   &-list {
     list-style-type: none;
     display: flex;
-    gap: 6rem;
     align-items: center;
     padding: 1rem;
+    gap: 6rem;
   }
 
   &-item-link {
@@ -65,4 +65,8 @@
 .header__button--sign-up {
   background-color: $on-surface;
   color: $white;
+}
+
+@media (max-width: 992px) {
+
 }

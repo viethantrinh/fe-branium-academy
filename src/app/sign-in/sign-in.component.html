@@ -1,1 +1,29 @@
-<p>sign-in works!</p>
+<div class="sign-in">
+  <h1 class="sign-in__title">Đăng nhập</h1>
+  <form class="sign-in__form">
+    <div class="sign-in__inputs">
+      <div class="sign-in__input-wrapper">
+        <label class="sign-in__label" for="email">Email</label>
+        <input type="email" id="email" class="sign-in__input" placeholder="Email"/>
+      </div>
+      <div class="sign-in__input-wrapper">
+        <label class="sign-in__label" for="password">Mật khẩu (tối thiểu 12 kí tự bao gồm....)</label>
+        <input type="password" id="password" class="sign-in__input" placeholder="Mật khẩu (tối thiểu 12 kí tự bao gồm....)"/>
+      </div>
+    </div>
+    <div class="sign-in__options">
+      <div class="sign-in__remember">
+        <input type="checkbox" id="remember" class="sign-in__checkbox"/>
+        <label for="remember" class="sign-in__checkbox-label">Duy trì đăng nhập</label>
+      </div>
+      <a href="#" class="sign-in__forgot">Quên mật khẩu</a>
+    </div>
+    <div class="sign-in__actions">
+      <button type="submit" class="sign-in__submit">Đăng nhập</button>
+      <div class="sign-in__signup">
+        <span>Bạn chưa có tài khoản?</span>
+        <a href="#" class="sign-in__signup-link">Đăng kí ngay</a>
+      </div>
+    </div>
+  </form>
+</div>

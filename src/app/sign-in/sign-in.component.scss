@@ -1,0 +1,117 @@
+@import "styles";
+
+.sign-in {
+  width: 768px;
+  height: 550px;
+  padding: 8rem;
+  margin: 8rem auto 40rem auto;
+  border: 0.2rem solid $secondary2;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.sign-in__title {
+  color: $on-surface;
+  @include font-heading-3
+}
+
+.sign-in__form {
+  width: 608px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.sign-in__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sign-in__input-wrapper {
+  display: flex;
+}
+
+.sign-in__input-wrapper label {
+  display: none; /* Hide label as the original HTML does not use visible labels */
+}
+
+
+.sign-in__input {
+  flex: 1 1 auto;
+  padding: 1.6rem 2rem;
+  @include font-caption-1;
+  color: $secondary2;
+  background: $white;
+  border-radius: 8px;
+  border: 1px solid $line;
+}
+
+.sign-in__options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-in__remember {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-in__checkbox {
+  width: 20px;
+  height: 20px;
+  background: $white;
+  border: 2px solid $primary;
+}
+
+.sign-in__checkbox-label {
+  color: $on-surface;
+  @include font-body-title
+}
+
+.sign-in__forgot {
+  color: $on-surface;
+  @include font-body-title;
+  text-decoration: none;
+}
+
+.sign-in__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sign-in__submit {
+  padding: 10px 200px;
+  color: $white;
+  background: $primary;
+  @include font-button;
+  text-transform: capitalize;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in__signup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sign-in__signup > span {
+  @include font-body-title;
+}
+
+.sign-in__signup-link {
+  color: $primary;
+  @include font-body-title;
+  text-decoration: none;
+}
+
+

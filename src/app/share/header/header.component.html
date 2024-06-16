@@ -1,24 +1,24 @@
 <header class="header">
   <div class="header__logo">
-    <a class="header__logo-link" [routerLink]="['/home']">
+    <a class="header__logo-link" [routerLink]="['home']">
       <img [priority]="true" ngSrc="/assets/images/brand-logo.png" alt="logo" height="69.087" width="157">
     </a>
   </div>
   <div class="header__menu">
     <ul class="header__menu-list">
       <li class="header__menu-item">
-        <a class="header__menu-item-link" [routerLink]="['/home']" [routerLinkActive]="['active']">TRANG CHỦ</a>
+        <a class="header__menu-item-link" [routerLink]="['home']" [routerLinkActive]="['active']">TRANG CHỦ</a>
       </li>
       <li class="header__menu-item">
-        <a class="header__menu-item-link" [routerLink]="['/courses']" [routerLinkActive]="['active']">KHÓA HỌC</a>
+        <a class="header__menu-item-link" [routerLink]="['courses']" [routerLinkActive]="['active']">KHÓA HỌC</a>
       </li>
       <li class="header__menu-item">
-        <a class="header__menu-item-link" [routerLink]="['/about-us']" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
+        <a class="header__menu-item-link" [routerLink]="['about-us']" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
       </li>
     </ul>
   </div>
   <div class="header__buttons">
-    <a class="header__button header__button--sign-in" [routerLink]="['/sign-in']">Đăng nhập</a>
-    <a class="header__button header__button--sign-up" [routerLink]="['/sign-up']">Đăng ký</a>
+    <a class="header__button header__button--sign-in" [routerLink]="['sign-in']">Đăng nhập</a>
+    <a class="header__button header__button--sign-up" [routerLink]="['sign-up']">Đăng ký</a>
   </div>
 </header>
