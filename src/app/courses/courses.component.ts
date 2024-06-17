@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {loading} from '../app.component';
 
 @Component({
   selector: 'ba-courses',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './courses.component.scss'
 })
 export class CoursesComponent {
-
+  loading = loading;
 }
