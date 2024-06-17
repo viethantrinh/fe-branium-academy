@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {loading} from '../app.component';
 
 @Component({
   selector: 'ba-courses',
@@ -9,5 +8,4 @@ import {loading} from '../app.component';
   styleUrl: './courses.component.scss'
 })
 export class CoursesComponent {
-  loading = loading;
 }

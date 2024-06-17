@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet} from '@angular/router';
-import {HeaderComponent} from './share/header/header.component';
-import {FooterComponent} from './share/footer/footer.component';
-import {HomeComponent} from './home/home.component';
+import {NavigationStart, Router, RouterOutlet} from '@angular/router';
+
 import {AsyncPipe} from '@angular/common';
 import {BehaviorSubject} from 'rxjs';
+import {HeaderComponent} from './view/share/header/header.component';
+import {FooterComponent} from './view/share/footer/footer.component';
+import {HomeComponent} from './view/home/home.component';
 
-export let loading: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
 @Component({
   selector: 'ba-root',
@@ -22,26 +22,36 @@ export let loading: BehaviorSubject<boolean> = new BehaviorSubject(false);
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  protected readonly loading = loading;
+  public static loading: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(private router: Router) {
 
   }
 
   ngOnInit(): void {
+    this.routeAnimationConfig();
+  }
+
+  /**
+   * Config the animation when route between view in app
+   */
+  private routeAnimationConfig() {
     this.router.events.subscribe(
       (event) => {
         if (event instanceof NavigationStart) {
           let currentUrl: string = event.url;
           if (currentUrl !== '/sign-in' && currentUrl !== '/sign-up') {
-            loading.next(true);
+            AppComponent.loading.next(true);
           }
           setTimeout(() => {
-            loading.next(false);
-          }, 2500)
+            AppComponent.loading.next(false);
+          }, 2000)
         }
-
       }
     );
+  }
+
+  get loading() {
+    return AppComponent.loading;
   }
 }
