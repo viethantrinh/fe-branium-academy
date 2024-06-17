@@ -3,6 +3,7 @@
 .footer {
   background-color: $surface;
   padding: 0 31.5rem;
+  z-index: 10000;
 }
 
 .footer__content {

@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
           }
           setTimeout(() => {
             AppComponent.loading.next(false);
-          }, 2000)
+          }, 200)
         }
       }
     );

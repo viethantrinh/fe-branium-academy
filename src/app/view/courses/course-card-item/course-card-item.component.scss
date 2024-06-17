@@ -1,0 +1,116 @@
+@import "styles";
+
+.course {
+  margin-top: 4rem;
+  width: 300px;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: $surface;
+  border: 1px solid $line;
+  border-radius: 0.8rem;
+  transition: 0.5s;
+}
+
+.course:hover {
+  box-shadow: 2px 2px 4px $secondary2;
+  cursor: pointer;
+}
+
+.course__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.course__images {
+  height: 160px;
+  position: relative;
+}
+
+.course__image--banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  z-index: 1;
+}
+
+.course__image--author {
+  width: 68px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 12.6rem;
+  right: 4.9rem;
+}
+
+.course__description {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.8rem;
+}
+
+.course__category {
+  @include font-caption-2;
+  color: $white;
+  background-color: $primary;
+  padding: 0 0.4rem;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+
+.course__title {
+  color: $on-surface;
+  @include font-body-title;
+}
+
+.course__quantities {
+  padding: 0 2rem;
+}
+
+.course__quantities-content {
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: end;
+  gap: 2.8rem;
+  border-top: 2px solid $line;
+}
+
+.course__quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: $on-surface;
+  @include font-button-uppercase;
+}
+
+.course__prices {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.course__price.course__price--original {
+  @include font-caption-2;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.course__price.course__price--discount {
+  @include font-button;
+  color: $on-surface;
+}
+
+
+
+
+
+
+
