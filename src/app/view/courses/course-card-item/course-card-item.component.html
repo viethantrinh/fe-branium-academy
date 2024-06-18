@@ -2,29 +2,33 @@
   <div class="course__infos">
     <div class="course__images">
       <img class="course__image course__image--banner"
-           src="https://braniumacademy.net/wp-content/uploads/2020/08/Java-avatar-400x300.webp" alt="course image">
+           [ngSrc]="course.photo" alt="course image" fill>
       <img class="course__image course__image--author"
            src="https://secure.gravatar.com/avatar/ff18511f1c4d78bfb9b1c210e08cb349?s=96&d=mm&r=g" alt="author avatar">
     </div>
     <div class="course__description">
-      <p class="course__category">Category</p>
-      <p class="course__title">Lập trình Java OOP từ cơ bản đến nâng cao</p>
+      <div class="course__categories">
+        @for (category of course.categories; track category.id) {
+          <p class="course__category">{{ category.name }}</p>
+        }
+      </div>
+      <p class="course__title">{{ course.title }}</p>
     </div>
     <div class="course__quantities">
       <div class="course__quantities-content">
         <div class="course__quantity course__quantity--lecture">
           <span class="material-icons-outlined">school</span>
-          <p>650</p>
+          <p>{{ course.totalLecture }}</p>
         </div>
         <div class="course__quantity course__ quantity--student">
           <span class="material-icons-outlined">people_alt</span>
-          <p>650</p>
+          <p>{{ course.totalStudent }}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="course__prices">
-    <p class="course__price course__price--original">1,599.000đ</p>
-    <p class="course__price course__price--discount">725,000đ</p>
+    <p class="course__price course__price--original">{{ course.price.toFixed(0) | currency : 'VND' }}</p>
+    <p class="course__price course__price--discount">{{ discountPrice.toFixed(0) | currency : 'VND' }}</p>
   </div>
 </section>

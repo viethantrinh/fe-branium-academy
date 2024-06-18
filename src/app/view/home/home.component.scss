@@ -51,3 +51,14 @@
 .courses-container {
   padding: 18rem 31.5rem 18rem 31.5rem;
 }
+
+.courses__title {
+  @include font-heading-3
+}
+.courses__list {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  justify-content: space-between;
+  grid-row-gap: 4rem;
+}

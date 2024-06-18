@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
-import {CourseService} from './course.service';
+import {CourseService} from '../services/course.service';
+
 
 @Injectable({
   providedIn: 'root'

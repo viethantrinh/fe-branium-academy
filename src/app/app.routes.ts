@@ -4,7 +4,7 @@ import {CoursesComponent} from './view/courses/courses.component';
 import {AboutUsComponent} from './view/about-us/about-us.component';
 import {SignInComponent} from './view/sign-in/sign-in.component';
 import {SignUpComponent} from './view/sign-up/sign-up.component';
-import {ResolverService} from './services/resolver.service';
+import {homeResolver} from './resolvers/home.resolver';
 
 
 export const routes: Routes = [
@@ -12,7 +12,7 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     resolve: {
-      courses: ResolverService
+      courses: homeResolver
     }
   },
   {
