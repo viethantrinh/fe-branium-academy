@@ -3,6 +3,8 @@
     <h1 class="courses__title">Tất cả các khóa học</h1>
   </div>
   <div class="courses__list">
-    <ba-course-card-item></ba-course-card-item>
+    @for (course of courseItems; track course.id) {
+      <ba-course-card-item></ba-course-card-item>
+    }
   </div>
 </div>
