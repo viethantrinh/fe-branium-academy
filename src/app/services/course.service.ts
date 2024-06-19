@@ -14,6 +14,6 @@ export class CourseService {
   }
 
   getCourseItems(): Observable<CourseItem[]> {
-    return this.http.get<CourseItem[]>(base_server_url_heroku + '/courses');
+    return this.http.get<CourseItem[]>(base_server_url + '/courses');
   }
 }
