@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
 
 import {BehaviorSubject} from 'rxjs';
-import {HeaderComponent} from './view/share/header/header.component';
-import {FooterComponent} from './view/share/footer/footer.component';
-import {HomeComponent} from './view/home/home.component';
+import {HeaderComponent} from './views/share/header/header.component';
+import {FooterComponent} from './views/share/footer/footer.component';
+import {HomeComponent} from './views/home/home.component';
 
 
 @Component({
