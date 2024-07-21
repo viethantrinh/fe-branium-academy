@@ -10,10 +10,7 @@ import {homeResolver} from './resolvers/home.resolver';
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
-    resolve: {
-      courses: homeResolver
-    }
+    component: HomeComponent
   },
   {
     path: 'courses',
