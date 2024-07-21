@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.routeAnimationConfig();
+    // this.routeAnimationConfig();
   }
 
   /**

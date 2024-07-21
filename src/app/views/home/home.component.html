@@ -1,26 +1,58 @@
 <section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__title">BẠN MUỐN TRỞ THÀNH MỘT DEVELOPER <br> THỰC THỤ?</h1>
-    <h5 class="hero__subtitle">CHÚNG TÔI SẼ GIÚP BẠN.</h5>
-    <div class="hero__details">
-      <h6 class="hero__detail">2000 học viên đã chọn chúng tôi.</h6>
-      <h6 class="hero__detail">Hàng chục khoá học cho bạn lựa chọn.</h6>
-      <h6 class="hero__detail">Học mọi lúc, mọi nơi chỉ cần có internet.</h6>
-    </div>
-    <div class="hero__buttons">
-      <a class="hero__button hero__button--courses" href="#courses">Các khoá học</a>
-    </div>
-  </div>
+  <!--  <div class="hero__content">-->
+  <!--    <h1 class="hero__title">BẠN MUỐN TRỞ THÀNH MỘT DEVELOPER <br> THỰC THỤ?</h1>-->
+  <!--    <h5 class="hero__subtitle">CHÚNG TÔI SẼ GIÚP BẠN.</h5>-->
+  <!--    <div class="hero__details">-->
+  <!--      <h6 class="hero__detail">2000 học viên đã chọn chúng tôi.</h6>-->
+  <!--      <h6 class="hero__detail">Hàng chục khoá học cho bạn lựa chọn.</h6>-->
+  <!--      <h6 class="hero__detail">Học mọi lúc, mọi nơi chỉ cần có internet.</h6>-->
+  <!--    </div>-->
+  <!--    <div class="hero__buttons">-->
+  <!--      <a class="hero__button hero__button-courses" href="#courses">Các khoá học</a>-->
+  <!--    </div>-->
+  <!--  </div>-->
 </section>
 
+<!--<section class="courses-container mt-5 mb-5">-->
+<!--  <div class="courses">-->
+<!--    <h1 class="courses__title">Tất cả các khóa học</h1>-->
+<!--    <div class="courses__list">-->
+<!--      @for (course of courseItems; track course.id) {-->
+<!--        <ba-course-card-item [course]="course"></ba-course-card-item>-->
+<!--      }-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
-<section class="courses-container">
-  <div class="courses">
-    <h1 class="courses__title">Tất cả các khóa học</h1>
-    <div class="courses__list">
-      @for (course of courseItems; track course.id) {
-        <ba-course-card-item [course]="course"></ba-course-card-item>
-      }
+<div class="container-fluid bg-primary-custom py-5">
+  <section class="container py-lg-4">
+    <div class="row ">
+      <div class="col-12 mb-2">
+        <h1 class="text-white fw-medium display-4">BẠN MUỐN TRỞ THÀNH MỘT DEVELOPER <br> THỰC THỤ?</h1>
+      </div>
+      <div class="col-12 mb-4">
+        <h5 class="text-dark fs-3">CHÚNG TÔI SẼ GIÚP BẠN.</h5>
+      </div>
+      <div class="col-12 mb-4">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <h6 class="text-white fs-5 text-truncate">2000 học viên đã chọn chúng tôi.</h6>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h6 class="text-white fs-5 text-truncate">Hàng chục khoá học cho bạn lựa chọn.</h6>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h6 class="text-white fs-5 text-truncate">Học mọi lúc, mọi nơi chỉ cần có internet.</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <a
+          class="d-inline-block text-capitalize text-decoration-none text-primary-custom px-4 py-3 bg-white fw-medium rounded-2"
+          href="#courses">Các khoá học</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
+
+

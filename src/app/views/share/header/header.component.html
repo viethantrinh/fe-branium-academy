@@ -1,32 +1,36 @@
-<nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
-  <div class="container-lg">
-    <a class="navbar-brand ms-sm-auto me-sm-auto" [routerLink]="['home']">
-      <img class="img-fluid" src="/assets/images/brand-logo.png" alt="logo" width="157">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-lg-auto ms-lg-5">
-        <li class="nav-item me-lg-4">
-          <a class="nav-link fw-medium" [routerLink]="['home']" [routerLinkActive]="['active']">TRANG CHỦ</a>
-        </li>
-        <li class="nav-item me-lg-4">
-          <a class="nav-link fw-medium" [routerLink]="['courses']" [routerLinkActive]="['active']">KHÓA HỌC</a>
-        </li>
-        <li class="nav-item me-lg-4">
-          <a class="nav-link fw-medium" [routerLink]="['about-us']" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
-        </li>
-      </ul>
-      <div class="mt-4 mb-3 mt-lg-0 mb-lg-0">
-        <a class="text-decoration-none fw-medium pe-2 px-lg-4 py-2 header__button--sign-in" [routerLink]="['sign-in']">
-          Đăng nhập
-        </a>
-        <a class="text-decoration-none fw-medium px-4 py-2 rounded-2 header__button--sign-up" [routerLink]="['sign-up']">
-          Đăng ký
-        </a>
+<header class="container-fluid">
+  <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+    <div class="container-lg">
+      <a class="navbar-brand ms-sm-auto me-sm-auto" [routerLink]="['home']">
+        <img class="img-fluid" src="/assets/images/brand-logo.png" alt="logo" width="157">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-lg-auto ms-lg-5">
+          <li class="nav-item me-lg-4">
+            <a class="nav-link fw-medium" [routerLink]="['home']" [routerLinkActive]="['active']">TRANG CHỦ</a>
+          </li>
+          <li class="nav-item me-lg-4">
+            <a class="nav-link fw-medium" [routerLink]="['courses']" [routerLinkActive]="['active']">KHÓA HỌC</a>
+          </li>
+          <li class="nav-item me-lg-4">
+            <a class="nav-link fw-medium" [routerLink]="['about-us']" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
+          </li>
+        </ul>
+        <div class="d-flex mt-4 mb-3 mt-lg-0 mb-lg-0">
+          <a class="text-decoration-none fw-medium pe-2 px-lg-4 py-2 header__button--sign-in"
+             [routerLink]="['sign-in']">
+            Đăng nhập
+          </a>
+          <a class="text-decoration-none fw-medium px-4 py-2 rounded-2 header__button--sign-up"
+             [routerLink]="['sign-up']">
+            Đăng ký
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
