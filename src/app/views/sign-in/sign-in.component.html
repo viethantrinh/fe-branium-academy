@@ -1,29 +1,48 @@
-<div class="sign-in">
-  <h1 class="sign-in__title">Đăng nhập</h1>
-  <form class="sign-in__form">
-    <div class="sign-in__inputs">
-      <div class="sign-in__input-wrapper">
-        <label class="sign-in__label" for="email">Email</label>
-        <input type="email" id="email" class="sign-in__input" placeholder="Email"/>
-      </div>
-      <div class="sign-in__input-wrapper">
-        <label class="sign-in__label" for="password">Mật khẩu (tối thiểu 12 kí tự bao gồm....)</label>
-        <input type="password" id="password" class="sign-in__input" placeholder="Mật khẩu (tối thiểu 12 kí tự bao gồm....)"/>
-      </div>
+<div class="container-fluid sign-in-container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <form class="sign-in-form px-4 py-5 col-lg-9">
+        <div class="text-center mb-4">
+          <h2 class="fs-1">Đăng nhập</h2>
+        </div>
+        <div class="row gx-0">
+          <div class="col-12 mb-4">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="Email"> <!-- data input -->
+              <label for="floatingInput" class="text-secondary">Email</label>
+            </div>
+          </div>
+          <div class="col-12 mb-3">
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Mật khẩu"> <!-- data input -->
+              <label for="floatingPassword" class="text-secondary">Mật khẩu</label>
+            </div>
+          </div>
+          <div class="col-12 d-flex justify-content-between mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="checkboxSave"> <!-- data input -->
+              <label class="form-check-label fw-medium" for="checkboxSave">
+                Duy trì đăng nhập
+              </label>
+            </div>
+            <div class="form-check">
+              <a href="" class="text-decoration-none fw-medium sign-in-forget-link">Quên mật khẩu?</a> <!-- data input -->
+            </div>
+          </div>
+          <div class="col-12 mb-3">
+            <a type="submit"
+               class="text-center w-100 d-inline-block p-2 text-white bg-primary-custom fw-medium rounded-2 text-decoration-none"> <!-- data input -->
+              Đăng nhập
+            </a>
+          </div>
+          <div class="col-12 text-center">
+          <span class="fw-medium">
+            Bạn chưa có tài khoản?
+            <a href="" class="text-primary-custom fw-medium text-decoration-none"> Đăng ký ngay.</a> <!-- data input -->
+          </span>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="sign-in__options">
-      <div class="sign-in__remember">
-        <input type="checkbox" id="remember" class="sign-in__checkbox"/>
-        <label for="remember" class="sign-in__checkbox-label">Duy trì đăng nhập</label>
-      </div>
-      <a href="#" class="sign-in__forgot">Quên mật khẩu</a>
-    </div>
-    <div class="sign-in__actions">
-      <button type="submit" class="sign-in__submit">Đăng nhập</button>
-      <div class="sign-in__signup">
-        <span>Bạn chưa có tài khoản?</span>
-        <a href="#" class="sign-in__signup-link">Đăng kí ngay</a>
-      </div>
-    </div>
-  </form>
+  </div>
 </div>
