@@ -1,104 +1,14 @@
-//@import "styles";
-//
-//.sign-up {
-//  width: 768px;
-//  padding: 8rem;
-//  margin: 8rem auto 40rem auto;
-//  border: 0.2rem solid $secondary2;
-//  border-radius: 1.2rem;
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  gap: 4rem;
-//}
-//
-//.sign-up__title {
-//  color: $on-surface;
-//  @include font-heading-3;
-//}
-//
-//.sign-up__form {
-//  width: 100%;
-//  display: flex;
-//  flex-direction: column;
-//  gap: 3.6rem;
-//}
-//
-//.sign-up__fields {
-//  display: flex;
-//  flex-direction: column;
-//  gap: 3.2rem;
-//}
-//
-//.sign-up__field-group {
-//  display: flex;
-//  gap: 2.4rem;
-//}
-//
-//.sign-up__field {
-//  display: flex;
-//  flex: 1 1 auto;
-//}
-//
-//.sign-up__label {
-//  display: none;
-//}
-//
-//.sign-up__input {
-//  flex: 1 1 auto;
-//  padding: 1.6rem 2rem;
-//  @include font-caption-1;
-//  color: $on-surface;
-//  background: $white;
-//  border-radius: 0.8rem;
-//  border: 1px solid $line;
-//}
-//
-//.sign-up__terms {
-//  display: flex;
-//  gap: 1.2rem;
-//}
-//
-//.sign-up__checkbox {
-//  width: 2rem;
-//  height: 2rem;
-//  background: $white;
-//}
-//
-//.sign-up__terms-text {
-//  @include font-body-title
-//}
-//
-//.sign-up__terms-link {
-//  @include font-body-title;
-//  color: $primary;
-//  text-decoration: none;
-//}
-//
-//.sign-up__actions {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  gap: 2rem;
-//}
-//
-//.sign-up__submit {
-//  padding: 1rem 20rem;
-//  color: $white;
-//  background: $primary;
-//  @include font-button;
-//  text-transform: capitalize;
-//  border-radius: 0.8rem;
-//  border: none;
-//  cursor: pointer;
-//}
-//
-//.sign-up__login-prompt {
-//  @include font-body-title;
-//}
-//
-//.sign-up__login-link {
-//  color: $primary;
-//  @include font-body-title;
-//  text-decoration: none;
-//}
+@import "styles";
+
+.sign-up-container {
+  margin: 80px auto 40px auto;
+}
+
+.sign-up-form {
+  border: 2px solid $secondary2;
+  border-radius: 1.2rem;
+}
+
+.sign-up-forget-link:hover {
+  color: $primary;
+}
