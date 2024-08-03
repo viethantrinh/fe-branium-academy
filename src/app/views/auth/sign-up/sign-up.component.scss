@@ -1,15 +1,14 @@
-@import "styles";
+@import "../../../../styles/styles";
 
-.sign-in-container {
+.sign-up-container {
   margin: 80px auto 40px auto;
 }
 
-.sign-in-form {
+.sign-up-form {
   border: 2px solid $secondary2;
   border-radius: 1.2rem;
 }
 
-.sign-in-forget-link:hover {
+.sign-up-forget-link:hover {
   color: $primary;
 }
-
