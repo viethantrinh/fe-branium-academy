@@ -4,7 +4,6 @@ import {CoursesComponent} from './views/courses/courses.component';
 import {AboutUsComponent} from './views/about-us/about-us.component';
 import {SignInComponent} from './views/auth/sign-in/sign-in.component';
 import {SignUpComponent} from './views/auth/sign-up/sign-up.component';
-import {homeResolver} from './resolvers/home.resolver';
 
 
 export const routes: Routes = [

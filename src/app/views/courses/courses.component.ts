@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {CourseCardItemComponent} from './course-card-item/course-card-item.component';
 
 

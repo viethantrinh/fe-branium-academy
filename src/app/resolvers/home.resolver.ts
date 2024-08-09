@@ -1,4 +1,4 @@
-import { ResolveFn } from '@angular/router';
+import {ResolveFn} from '@angular/router';
 import {CourseItem} from '../models/course.model';
 import {CourseService} from '../services/course.service';
 import {inject} from '@angular/core';
