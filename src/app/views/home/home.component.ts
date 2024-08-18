@@ -26,4 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
 
+  onUnauthenticated() {
+    this.userService.updateUserAuthenticatedStatus(false);
+  }
 }

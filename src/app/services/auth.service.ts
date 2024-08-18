@@ -1,9 +1,8 @@
-import {inject, Injectable, signal} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {base_server_url} from '../utils/constants/constants';
+import {base_server_url} from '../utils/constants/application-constants';
 import {tap} from 'rxjs';
 import {UserSI} from '../models/user.model';
-import {UserService} from './user.service';
 
 
 @Injectable({
@@ -11,7 +10,6 @@ import {UserService} from './user.service';
 })
 export class AuthService {
   private readonly http = inject(HttpClient);
-  private readonly userService = inject(UserService);
 
   /**
    * Send request to backend to authenticate user details
@@ -28,7 +26,6 @@ export class AuthService {
             localStorage.setItem("accessToken", body.accessToken);
           }
         })
-      );
+      )
   }
-
 }
