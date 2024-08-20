@@ -10,26 +10,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-lg-auto ms-lg-5">
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="['home']" [routerLinkActive]="['active']">TRANG CHỦ</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.HOME]" [routerLinkActive]="['active']">TRANG CHỦ</a>
           </li>
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="['courses']" [routerLinkActive]="['active']">KHÓA HỌC</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.COURSES]" [routerLinkActive]="['active']">KHÓA HỌC</a>
           </li>
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="['about-us']" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.ABOUT_US]" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
           </li>
-          @if (isAdmin) {
-            <li class="nav-item me-lg-4 dropdown">
-              <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">
-                QUẢN LÝ
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Users</a></li>
-                <li><a class="dropdown-item" href="#">Courses</a></li>
-                <li><a class="dropdown-item" href="#">Something else</a></li>
-              </ul>
-            </li>
-          }
+          <li class="nav-item me-lg-4">
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.MANAGE]" [routerLinkActive]="['active']">QUẢN LÝ</a>
+          </li>
         </ul>
         @if (!authenticated()) {
           <div class="d-flex mt-4 mb-3 mt-lg-0 mb-lg-0">

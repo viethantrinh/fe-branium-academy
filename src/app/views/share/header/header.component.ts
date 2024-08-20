@@ -2,9 +2,9 @@ import {Component, computed, inject} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../../services/user.service';
-import {Role} from '../../../models/user.model';
 import {ROLE_ADMIN} from '../../../utils/constants/authority-constants';
-import {isUndefined} from 'lodash';
+import {APP_ROUTER_TOKENS} from '../../../app.routes';
+import {MANAGE_ROUTER_TOKENS} from '../../manage-view/manage.routes';
 
 
 @Component({
@@ -32,4 +32,7 @@ export class HeaderComponent {
     if (admin) return true;
     return false;
   }
+
+  protected readonly APP_ROUTER_TOKENS = APP_ROUTER_TOKENS;
+  protected readonly MANAGE_ROUTER_TOKENS = MANAGE_ROUTER_TOKENS;
 }
