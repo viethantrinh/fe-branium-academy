@@ -1,0 +1,29 @@
+<div class="d-flex flex-column text-white pt-4 px-2">
+  <div class="d-flex align-items-center gap-3">
+    <span class="material-symbols-outlined text-white fs-1">home_app_logo</span>
+    <p class="text-white fs-3 fw-medium text-center m-0 pt-2" style="letter-spacing: 1px">Management</p>
+  </div>
+  <hr class="mb-4 text-white">
+  <div class="d-flex flex-column gap-2">
+    <a class="d-flex gap-3 align-items-center ps-3 py-2 text-decoration-none mb-2"
+       [routerLink]="[MANAGE_ROUTER_TOKENS.HOME_MANAGE]" [routerLinkActive]="['active-manage']">
+      <span class="material-symbols-outlined text-white fs-3">home</span>
+      <a class="text-white text-decoration-none fs-5 pt-1">Home</a>
+    </a>
+    <a class="d-flex gap-3 align-items-center ps-3 py-2 text-decoration-none mb-2"
+       [routerLink]="[MANAGE_ROUTER_TOKENS.USER_MANAGE]" [routerLinkActive]="['active-manage']">
+      <span class="material-symbols-outlined text-white fs-3">person</span>
+      <a class="text-white text-decoration-none fs-5 pt-1">User</a>
+    </a>
+    <a class="d-flex gap-3 align-items-center ps-3 py-2 text-decoration-none mb-2"
+       [routerLink]="[MANAGE_ROUTER_TOKENS.COURSE_MANAGE]" [routerLinkActive]="['active-manage']">
+      <span class="material-symbols-outlined text-white fs-3">school</span>
+      <a class="text-white text-decoration-none fs-5 pt-1">Course</a>
+    </a>
+    <a class="d-flex gap-3 align-items-center ps-3 py-2 text-decoration-none mb-2"
+       [routerLink]="[MANAGE_ROUTER_TOKENS.CATEGORY_MANAGE]" [routerLinkActive]="['active-manage']">
+      <span class="material-symbols-outlined text-white fs-3">category</span>
+      <a class="text-white text-decoration-none fs-5 pt-1">Category</a>
+    </a>
+  </div>
+</div>

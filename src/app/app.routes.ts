@@ -33,7 +33,7 @@ export const APP_ROUTES: Routes = [
     component: AboutUsComponent
   },
   {
-    path: APP_ROUTER_TOKENS.MANAGE,
+    path: `${APP_ROUTER_TOKENS.MANAGE}`,
     component: ManageViewComponent,
     children: MANAGE_ROUTES
   },

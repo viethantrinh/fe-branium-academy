@@ -2,6 +2,7 @@
 @import "typography";
 @import "animation";
 @import "custom";
+@import "material-symbols";
 @import 'material-icons/iconfont/material-icons.css';
 
 /* Rules for sizing the icon. */
@@ -47,6 +48,10 @@
 *, *::before, *::after {
   font-family: Roboto, sans-serif;
   color: $on-surface;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
 
 
