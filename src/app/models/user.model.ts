@@ -14,6 +14,7 @@ export interface User {
   vipLevel: number;
   phoneNumber: string;
   roles: Role[];
+  avatar: any;
   authenticated: boolean;
 }
 

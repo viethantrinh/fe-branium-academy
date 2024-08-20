@@ -1,10 +1,11 @@
-import {Component, computed, inject} from '@angular/core';
+import {Component, computed, inject, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../../services/user.service';
 import {ROLE_ADMIN} from '../../../utils/constants/authority-constants';
 import {APP_ROUTER_TOKENS} from '../../../app.routes';
 import {MANAGE_ROUTER_TOKENS} from '../../manage-view/manage.routes';
+import {AuthService} from '../../../services/auth.service';
 
 
 @Component({
@@ -18,21 +19,24 @@ import {MANAGE_ROUTER_TOKENS} from '../../manage-view/manage.routes';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
-  private readonly userService = inject(UserService);
-  authenticated = computed<boolean>(() => this.userService.user()?.authenticated ?? false)
-
-  /**
-   * Check if the current user is an admin or not to show the manage tab 'QUẢN LÝ'
-   */
-  get isAdmin() {
-    const admin = this.userService.user()?.roles.some((role) => {
-      return role.name === ROLE_ADMIN;
-    });
-    if (admin) return true;
-    return false;
-  }
+export class HeaderComponent implements OnInit {
 
   protected readonly APP_ROUTER_TOKENS = APP_ROUTER_TOKENS;
-  protected readonly MANAGE_ROUTER_TOKENS = MANAGE_ROUTER_TOKENS;
+  private readonly userService = inject(UserService);
+  private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
+  protected authenticated = computed<boolean>(() => this.userService.user()?.authenticated ?? false)
+  protected userAvatar = computed<any>(() => this.userService.user()?.avatar ?? undefined);
+  protected isAdminUser = computed<boolean >(() => this.userService.user()?.roles?.some((role) => role.name === ROLE_ADMIN) ?? false);
+
+
+  ngOnInit(): void {
+  }
+
+  onSignOut() {
+    this.authService.signOut();
+    this.router.navigate([APP_ROUTER_TOKENS.HOME], {
+      replaceUrl: true
+    });
+  }
 }

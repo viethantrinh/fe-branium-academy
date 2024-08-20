@@ -22,11 +22,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.userService.user());
+    console.log(this.userService.user())
   }
 
 
-  onUnauthenticated() {
-    this.userService.updateUserAuthenticatedStatus(false);
-  }
 }

@@ -1,6 +1,6 @@
 <header class="sticky-top">
   <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
-    <div class="container-fluid px-5 " id="nav-sizing">
+    <div class="container-lg" id="nav-sizing">
       <a class="navbar-brand ms-sm-auto me-sm-auto" [routerLink]="['home']">
         <img class="img-fluid" src="/assets/images/brand-logo.png" alt="logo" width="157">
       </a>
@@ -10,17 +10,27 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-lg-auto ms-lg-5">
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.HOME]" [routerLinkActive]="['active']">TRANG CHỦ</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.HOME]" [routerLinkActive]="['active']">
+              TRANG CHỦ
+            </a>
           </li>
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.COURSES]" [routerLinkActive]="['active']">KHÓA HỌC</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.COURSES]" [routerLinkActive]="['active']">
+              KHÓA HỌC
+            </a>
           </li>
           <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.ABOUT_US]" [routerLinkActive]="['active']">VỀ CHÚNG TÔI</a>
+            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.ABOUT_US]" [routerLinkActive]="['active']">
+              VỀ CHÚNG TÔI
+            </a>
           </li>
-          <li class="nav-item me-lg-4">
-            <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.MANAGE]" [routerLinkActive]="['active']">QUẢN LÝ</a>
-          </li>
+          @if (isAdminUser()) {
+            <li class="nav-item me-lg-4">
+              <a class="nav-link fw-medium" [routerLink]="[APP_ROUTER_TOKENS.MANAGE]" [routerLinkActive]="['active']">
+                QUẢN LÝ
+              </a>
+            </li>
+          }
         </ul>
         @if (!authenticated()) {
           <div class="d-flex mt-4 mb-3 mt-lg-0 mb-lg-0">
@@ -32,6 +42,20 @@
                [routerLink]="['sign-up']">
               Đăng ký
             </a>
+          </div>
+        } @else {
+          <div class="dropdown">
+            @if (userAvatar()) {
+              <img [src]="userAvatar()" width="45px" class="rounded-circle dropdown-toggle" data-bs-toggle="dropdown"/>
+            } @else {
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="45px"
+                   class="rounded-circle dropdown-toggle" data-bs-toggle="dropdown"/>
+            }
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Setting</a></li>
+              <li><a class="dropdown-item" (click)="onSignOut()">Đăng xuất</a></li>
+            </ul>
           </div>
         }
       </div>

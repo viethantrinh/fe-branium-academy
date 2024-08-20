@@ -51,12 +51,16 @@ export class SignInComponent {
     this.authService.signIn(signInData).subscribe({
       complete: () => {
         this.userService.getUserData().subscribe({
-          next: () => this.router.navigate(['/home'], {
-            replaceUrl: true
-          })
+          next: () => {
+            this.userService.getUserAvatar().subscribe((data) => {
+              this.userService.updateUserAvatar(data);
+              this.router.navigate(['/home'], {
+                replaceUrl: true
+              })
+            });
+          }
         });
       }
     })
-
   }
 }
