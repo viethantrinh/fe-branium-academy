@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log(this.userService.user());
   }
 
   onSignOut() {
@@ -41,4 +42,6 @@ export class HeaderComponent implements OnInit {
       replaceUrl: true
     });
   }
+
+  protected readonly localStorage = localStorage;
 }

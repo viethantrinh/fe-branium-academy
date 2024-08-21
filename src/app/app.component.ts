@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
 
 import {BehaviorSubject} from 'rxjs';
 import {HeaderComponent} from './views/share/header/header.component';
 import {FooterComponent} from './views/share/footer/footer.component';
 import {HomeComponent} from './views/home/home.component';
+import {UserService} from './services/user.service';
 
 
 @Component({
@@ -20,6 +21,7 @@ import {HomeComponent} from './views/home/home.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  private readonly userService = inject(UserService);
   public static loading: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(private router: Router) {
@@ -28,6 +30,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // this.routeAnimationConfig();
+    if (localStorage.getItem('accessToken') && !this.userService.user()) {
+      this.userService.getUserData().subscribe((data) => console.log('Loading user data...' + data))
+    }
   }
 
   /**

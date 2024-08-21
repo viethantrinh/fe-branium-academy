@@ -28,4 +28,7 @@ export class UserManageComponent implements OnInit {
     return listOfRoles;
   }
 
+  public onCreateUser() {
+
+  }
 }
