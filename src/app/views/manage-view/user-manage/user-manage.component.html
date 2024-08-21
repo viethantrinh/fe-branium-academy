@@ -1,42 +1,42 @@
 <div class="container">
-  <h1 class="fw-semibold">User Management</h1>
-  <div>
-    <table class="table">
-      <thead>
+  <h1 class="fw-semibold mb-5">User Management</h1>
+  <div class="mt-5 mb-3 d-flex justify-content-between">
+    <button>CREATE USER</button>
+    <input type="search" placeholder="Search user">
+  </div>
+  <div class="border border-2 border-dark rounded-3">
+    <table
+      class="table table-striped table-hover table-bordered table-responsive caption-top rounded-3 overflow-hidden mb-0 border border-2 border-dark">
+      <thead class="table-light border border-dark border-2">
       <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Email</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Enable</th>
-        <th scope="col">Vip</th>
-        <th scope="col">Role</th>
-        <th scope="col">Role</th>
+        <th scope="col" width="10%">ID</th>
+        <th scope="col" width="5%">Avatar</th>
+        <th scope="col" width="15%">Email</th>
+        <th scope="col" width="10%">First</th>
+        <th scope="col" width="10%">Last</th>
+        <th scope="col" width="15%">Role</th>
+        <th scope="col" width="5%%">Enable</th>
+        <th scope="col">Edit</th>
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td></td>
-      </tr>    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td></td>
-      </tr>    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td></td>
-      </tr>
+      <tbody class="table-group-divider">
+        @for (user of users(); track user.id) {
+          <tr>
+            <th scope="row">{{ user.id.substring(0, 10) }}</th>
+            <td class="text-center">
+              <img [src]="user.avatar" class="rounded-3" alt="user's avatar" width="30px">
+            </td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ extractUserRoles(user.roles) }}</td>
+            <td>{{ user.enabled }}</td>
+            <td>
+              <button>update</button>
+              <button>delete</button>
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   </div>

@@ -52,12 +52,9 @@ export class SignInComponent {
       complete: () => {
         this.userService.getUserData().subscribe({
           next: () => {
-            this.userService.getUserAvatar().subscribe((data) => {
-              this.userService.updateUserAvatar(data);
-              this.router.navigate(['/home'], {
-                replaceUrl: true
-              })
-            });
+            this.router.navigate(['/home'], {
+              replaceUrl: true
+            })
           }
         });
       }

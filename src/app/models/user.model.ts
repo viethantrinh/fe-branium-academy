@@ -5,17 +5,18 @@ export interface UserSI {
 
 export interface User {
   id: string;
-  username: string;
+  username?: string;
   email: string;
   firstName: string;
   lastName: string;
-  gender: boolean;
-  birthDate: string;
-  vipLevel: number;
-  phoneNumber: string;
+  enabled?: boolean;
+  gender?: boolean;
+  birthDate?: string;
+  vipLevel?: number;
+  phoneNumber?: string;
+  avatar?: any;
   roles: Role[];
-  avatar: any;
-  authenticated: boolean;
+  authenticated?: boolean;
 }
 
 export interface Role {

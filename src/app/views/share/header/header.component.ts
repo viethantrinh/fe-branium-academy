@@ -4,7 +4,6 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../../services/user.service';
 import {ROLE_ADMIN} from '../../../utils/constants/authority-constants';
 import {APP_ROUTER_TOKENS} from '../../../app.routes';
-import {MANAGE_ROUTER_TOKENS} from '../../manage-view/manage.routes';
 import {AuthService} from '../../../services/auth.service';
 
 
@@ -25,9 +24,12 @@ export class HeaderComponent implements OnInit {
   private readonly userService = inject(UserService);
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
-  protected authenticated = computed<boolean>(() => this.userService.user()?.authenticated ?? false)
-  protected userAvatar = computed<any>(() => this.userService.user()?.avatar ?? undefined);
-  protected isAdminUser = computed<boolean >(() => this.userService.user()?.roles?.some((role) => role.name === ROLE_ADMIN) ?? false);
+  protected authenticated = computed<boolean>(() =>
+    this.userService.user()?.authenticated ?? false)
+  protected userAvatar = computed<any>(() =>
+    this.userService.user()?.avatar ?? null);
+  protected isAdminUser = computed<boolean>(() =>
+    this.userService.user()?.roles?.some((role) => role.name === ROLE_ADMIN) ?? false);
 
 
   ngOnInit(): void {
