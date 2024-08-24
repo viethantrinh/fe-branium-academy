@@ -1,1 +1,7 @@
-export const ROLE_ADMIN: string = 'ADMIN';
+
+export enum ROLES {
+  ROLE_ADMIN = 'ADMIN',
+  ROLE_CUSTOMER = 'CUSTOMER',
+  ROLE_INSTRUCTOR = 'INSTRUCTOR',
+  ROLE_STUDENT = 'STUDENT'
+}

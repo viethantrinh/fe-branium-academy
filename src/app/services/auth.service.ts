@@ -1,16 +1,17 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 import {base_server_url} from '../utils/constants/application-constants';
 import {tap} from 'rxjs';
 import {UserSI} from '../models/user.model';
 import {UserService} from './user.service';
+import {HttpBackendClientService} from './http-backend-client.service';
 
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthService {
-  private readonly http = inject(HttpClient);
+  private readonly httpBackendClientService = inject(HttpBackendClientService);
   private readonly userService = inject(UserService);
 
   /**
@@ -20,8 +21,8 @@ export class AuthService {
    */
   public signIn(signInData: UserSI) {
     const signInUrl = base_server_url + "/auth/sign-in";
-    return this.http
-      .post<{ accessToken: string, authenticated: boolean }>(signInUrl, signInData, {observe: 'response'})
+    return this.httpBackendClientService
+      .post<{ accessToken: string, authenticated: boolean }>(signInUrl, signInData, {observe: 'response', })
       .pipe(
         tap(({body}) => {
           if (body) {
@@ -43,7 +44,7 @@ export class AuthService {
     const signOutReq = {
       accessToken: localStorage.getItem('accessToken')
     };
-    this.http.post(url, signOutReq).subscribe((data) =>
+    this.httpBackendClientService .post(url, signOutReq).subscribe((data) =>
       console.log(data));
 
     // remove the token in local storage

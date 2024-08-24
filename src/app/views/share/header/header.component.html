@@ -46,9 +46,9 @@
         } @else {
           <div class="dropdown">
             @if (userAvatar()) {
-              <img [src]="userAvatar()" width="45px" class="rounded-circle dropdown-toggle" data-bs-toggle="dropdown"/>
+              <img [src]="userAvatar()" width="45px" height="45px" class="rounded-circle dropdown-toggle" data-bs-toggle="dropdown"/>
             } @else {
-              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="45px"
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="45px" height="45px"
                    class="rounded-circle dropdown-toggle" data-bs-toggle="dropdown"/>
             }
             <ul class="dropdown-menu dropdown-menu-end">

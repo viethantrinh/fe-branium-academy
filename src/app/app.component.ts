@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // this.routeAnimationConfig();
     if (localStorage.getItem('accessToken') && !this.userService.user()) {
-      this.userService.getUserData().subscribe((data) => console.log('Loading user data...' + data))
+      this.userService.getUserData().subscribe();
     }
   }
 

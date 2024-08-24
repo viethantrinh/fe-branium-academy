@@ -2,7 +2,7 @@ import {Component, computed, inject, OnChanges, OnDestroy, OnInit, SimpleChanges
 import {NgOptimizedImage} from '@angular/common';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../../services/user.service';
-import {ROLE_ADMIN} from '../../../utils/constants/authority-constants';
+import {ROLES} from '../../../utils/constants/authority-constants';
 import {APP_ROUTER_TOKENS} from '../../../app.routes';
 import {AuthService} from '../../../services/auth.service';
 
@@ -29,11 +29,10 @@ export class HeaderComponent implements OnInit {
   protected userAvatar = computed<any>(() =>
     this.userService.user()?.avatar ?? null);
   protected isAdminUser = computed<boolean>(() =>
-    this.userService.user()?.roles?.some((role) => role.name === ROLE_ADMIN) ?? false);
+    this.userService.user()?.roles?.some((role) => role.name === ROLES.ROLE_ADMIN) ?? false);
 
 
   ngOnInit(): void {
-    console.log(this.userService.user());
   }
 
   onSignOut() {
