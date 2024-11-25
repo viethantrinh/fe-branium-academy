@@ -1,68 +1,13 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
-
-import {BehaviorSubject} from 'rxjs';
-import {HeaderComponent} from './views/share/header/header.component';
-import {FooterComponent} from './views/share/footer/footer.component';
-import {HomeComponent} from './views/home/home.component';
-import {UserService} from './services/user.service';
-
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'ba-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-  ],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
-  private readonly userService = inject(UserService);
-  public static loading: BehaviorSubject<boolean> = new BehaviorSubject(false);
-
-  constructor(private router: Router) {
-
-  }
-
-  ngOnInit(): void {
-    // this.routeAnimationConfig();
-    if (localStorage.getItem('accessToken') && !this.userService.user()) {
-      this.userService.getUserData().subscribe();
-    }
-  }
-
-  /**
-   * Config the animation when route between view in app
-   */
-  private routeAnimationConfig() {
-    this.router.events.subscribe(
-      (event) => {
-        if (event instanceof NavigationStart) {
-          let currentUrl: string = event.url;
-          if (currentUrl !== '/sign-in' && currentUrl !== '/sign-up') {
-            AppComponent.loading.next(true);
-          }
-        }
-
-        if (event instanceof NavigationEnd) {
-          let currentUrl: string = event.url;
-          if (currentUrl === '/home') {
-            AppComponent.loading.next(false);
-          } else {
-            setTimeout(() => {
-              AppComponent.loading.next(false);
-            }, 1500)
-          }
-        }
-      }
-    );
-  }
-
-  get loading() {
-    return AppComponent.loading;
-  }
+export class AppComponent {
+  title = 'fe-branium-academy';
 }
